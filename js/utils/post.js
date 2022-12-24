@@ -16,6 +16,10 @@ function createPostElement(post) {
 
   // Edit title, desc, author, thumnail
 
+  const postIdElement = liElement.querySelector('[data-id="postId"]');
+  console.log(postIdElement);
+  if (postIdElement) postIdElement.setAttribute('data-uid', post.id);
+
   const titleElement = liElement.querySelector('[data-id="title"]');
   if (titleElement) titleElement.textContent = post.title;
 
@@ -33,7 +37,7 @@ function createPostElement(post) {
     });
   }
   // Calculate timestand
-  dayjs(post.updateAt).fromNow();
+  dayjs(post.updatedAt).fromNow();
   // console.log('time spand', dayjs(post.updateAt).fromNow());
   const timeSpan = liElement.querySelector('[data-id="timeSpan"]');
   if (timeSpan) timeSpan.textContent = ' - ' + dayjs(post.updateAt).fromNow();

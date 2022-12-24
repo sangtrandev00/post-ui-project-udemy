@@ -64,6 +64,14 @@ async function handleFilterChange(filterName, filterValue) {
     const { data, pagination } = await postApi.getAll(queryParams);
     renderPostList('postsList', data);
     renderPagination('pagination', pagination);
+
+    const postList = document.querySelectorAll('.post-item');
+    console.log(postList);
+    for (const postItem of postList) {
+      postItem.addEventListener('click', () => {
+        window.location.assign(`./post-detail.html?id=${postItem.dataset.uid}`);
+      });
+    }
   } catch (error) {
     console.log('error', error.response);
   }

@@ -29,7 +29,7 @@
   <!-- This is a template HTML for a post item -->
   <template id="postItemTemplate">
     <li class="col-12 col-md-6 col-lg-4">
-      <div class="post-item mb-4">
+      <div class="post-item mb-4" data-id="postId" data-uid="">
         <div class="card">
           <img data-id="thumbnail" src="images/recipe.jpg" class="card-img-top" alt="recipe" />
 
@@ -130,11 +130,14 @@
   <footer class="text-center text-muted py-3">
     <small>Created by Po with <i class="fas fa-heart"></i></small>
   </footer>
+  <!-- Bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
 
   <!-- Scripts should be placed here to prevent blocking render UI -->
   <script type="module" src="js/home.js"></script>
   <!-- <script type="module" src="js/main.js"></script> -->
-
 
 </body>
 
